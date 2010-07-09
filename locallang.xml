@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description></description>
+		<labelContext type="array">
+			<label index="title"></label>
+		</labelContext>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="title">DAM Indexing</label>
+			<label index="description">Automatically reindex of DAM files</label>
+			<label index="label.setupFile">Location of setup-definition file (relative to fileadmin/)</label>
+			<label index="label.setupFile.error">Sorry. The setup file on location %s could not be found</label>
+			<label index="label.setupFile.empty">Please provide a setup file</label>
+		</languageKey>
+
+	</data>
+</T3locallang>
