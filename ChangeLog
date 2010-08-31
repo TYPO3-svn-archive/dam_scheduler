@@ -7,8 +7,8 @@
 	* additionalFieldProvided extrahiert (standard) 
 	* field title added to scheduler
 	* documentation (howto setup _cli_scheduler privilegs)
+	* translation (de, da)
 	
 2010-08-31 Michael Feinbier
 
-	* German translation
 	* additional cleanup for 0.1.0

@@ -28,7 +28,8 @@
 /**
 * Additional fields, provided for automatically reindex DAM files via the scheduler
 *
-* @author     Michael Feinbier <mf@hdnet.de>
+* @author     Michael Feinbier <typo3@feinbier.net>
+* @author     Joerg Kummer <typo3[by]enobe.de>
 * @package    TYPO3
 * @subpackage tx_damscheduler
 * @version    SVN: $Id$

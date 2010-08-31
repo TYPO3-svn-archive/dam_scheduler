@@ -9,21 +9,27 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="title">DAM Indexing</label>
-			<label index="description">Automatically reindex of DAM files</label>
-			<label index="label.setupTitle">Title for this setup-definition (optional)</label>
-			<label index="label.setupFile">Location of setup-definition file (relative to fileadmin/)</label>
-			<label index="label.setupFile.error">Sorry. The setup file on location %s could not be found</label>
-			<label index="label.setupFile.empty">Please provide a setup file</label>
+			<label index="description">Automatically index of DAM files</label>
+			<label index="label.setupTitle">Title for this indexing (optional)</label>
+			<label index="label.setupFile">Location of setup file (relative to fileadmin/)</label>
+			<label index="label.setupFile.error">Sorry. The setup file on location %s could not be found.</label>
+			<label index="label.setupFile.empty">Please provide a setup file.</label>
 		</languageKey>
-		
 		<languageKey index="de" type="array">
 			<label index="title">DAM Indexierung</label>
-			<label index="description">Automatische Neuindexierung von Dateien im DAM</label>
-			<label index="label.setupTitle">Titel für Setup-Datei (optional)</label>
-			<label index="label.setupFile">Pfad zur Setup-Datei (relativ zu fileadmin/)</label>
-			<label index="label.setupFile.error">Sorry. Die Setup-Datei konnte unter dem Pfad %s nicht gefunden werden.</label>
-			<label index="label.setupFile.empty">Bitte geben Sie eine Setup-Datei an</label>
+			<label index="description">Automatisches Indexieren von DAM Dateien</label>
+			<label index="label.setupTitle">Titel für diese Indexierung (optional)</label>
+			<label index="label.setupFile">Pfad zur Setup Datei (relativ zu fileadmin/)</label>
+			<label index="label.setupFile.error">Fehler. Die Setup Datei in %s wurde nicht gefunden.</label>
+			<label index="label.setupFile.empty">Bitte eine Setup Datei angeben.</label>
 		</languageKey>
-
+		<languageKey index="dk" type="array">
+			<label index="title">DAM Indexering</label>
+			<label index="description">Automatisk indexering for DAM filer</label>
+			<label index="label.setupTitle">Title for denne indexering (optional)</label>
+			<label index="label.setupFile">Stig til setup fil (relativ til fileadmin/)</label>
+			<label index="label.setupFile.error">Fejl. Setup fil at %s ikke fundet.</label>
+			<label index="label.setupFile.empty">Angir venligst et setup fil.</label>
+		</languageKey>
 	</data>
 </T3locallang>
