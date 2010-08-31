@@ -7,6 +7,6 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']['tx_damscheduler
 	'extension'        => $_EXTKEY,
 	'title'            => 'LLL:EXT:' . $_EXTKEY . '/locallang.xml:title',
 	'description'      => 'LLL:EXT:' . $_EXTKEY . '/locallang.xml:description',
-	'additionalFields' => 'tx_damscheduler_indexTask'
+	'additionalFields' => 'tx_damscheduler_indexTask_AdditionalFieldProvider'
 );
 ?>

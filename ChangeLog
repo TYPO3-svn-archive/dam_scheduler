@@ -1,3 +1,14 @@
 2010-06-30 Michael Feinbier  <typo3@feinbier.net>
 
 	* initial check in
+
+2010-08-27 Joerg kummer <typo3[by]enobe.de>
+
+	* additionalFieldProvided extrahiert (standard) 
+	* field title added to scheduler
+	* documentation (howto setup _cli_scheduler privilegs)
+	
+2010-08-31 Michael Feinbier
+
+	* German translation
+	* additional cleanup for 0.1.0

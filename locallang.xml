@@ -10,9 +10,19 @@
 		<languageKey index="default" type="array">
 			<label index="title">DAM Indexing</label>
 			<label index="description">Automatically reindex of DAM files</label>
+			<label index="label.setupTitle">Title for this setup-definition (optional)</label>
 			<label index="label.setupFile">Location of setup-definition file (relative to fileadmin/)</label>
 			<label index="label.setupFile.error">Sorry. The setup file on location %s could not be found</label>
 			<label index="label.setupFile.empty">Please provide a setup file</label>
+		</languageKey>
+		
+		<languageKey index="de" type="array">
+			<label index="title">DAM Indexierung</label>
+			<label index="description">Automatische Neuindexierung von Dateien im DAM</label>
+			<label index="label.setupTitle">Titel für Setup-Datei (optional)</label>
+			<label index="label.setupFile">Pfad zur Setup-Datei (relativ zu fileadmin/)</label>
+			<label index="label.setupFile.error">Sorry. Die Setup-Datei konnte unter dem Pfad %s nicht gefunden werden.</label>
+			<label index="label.setupFile.empty">Bitte geben Sie eine Setup-Datei an</label>
 		</languageKey>
 
 	</data>

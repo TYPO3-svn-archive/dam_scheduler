@@ -36,20 +36,32 @@ require_once(PATH_txdam.'lib/class.tx_dam_indexing.php');
  * @subpackage tx_damscheduler
  * @version    SVN: $Id$
  */
-class tx_damscheduler_indexTask extends tx_scheduler_Task implements tx_scheduler_AdditionalFieldProvider {
+class tx_damscheduler_indexTask extends tx_scheduler_Task {
 
 	/**
 	 * The Indexer to run
 	 * @var tx_dam_indexing
 	 */
 	protected $indexer;
-	
-	protected $setupFileKey = 'setupFile';
 
+	/**
+	 * Additional Field
+	 * The path to the setupFile
+	 * @var string
+	 */
 	public $setupFile;
+	
+	/**
+	 * Additional Field
+	 * The title for the setupFile
+	 * @var string
+	 */
+	public $setupTitle;
 
 	/**
 	 * Executes the reindex of the DAM
+	 *
+	 * @return boolean
 	 */
 	public function execute() {
 		$this->indexer = t3lib_div::makeInstance('tx_dam_indexing');
@@ -63,9 +75,10 @@ class tx_damscheduler_indexTask extends tx_scheduler_Task implements tx_schedule
 		$this->indexer->indexUsingCurrentSetup();
 		return true;
 	}
-	
+
 	/**
 	 * Returns the XML-Content of the setup file content
+	 *
 	 * @return string (xml)
 	 */
 	protected function getSetupFileContent() {
@@ -75,66 +88,20 @@ class tx_damscheduler_indexTask extends tx_scheduler_Task implements tx_schedule
 
 	/**
 	 * Return Additional Information from CronRun
+	 *
+	 * @return string
 	 */
 	public function getAdditionalInformation() {
-		return 'Setup File: ' . str_replace(PATH_site,'',$this->setupFile);
-	}
-	
-	/**
-	 * Gets additional fields to render in the form to add/edit a task
-	 *
-	 * @param  array               Values of the fields from the add/edit task form
-	 * @param  tx_scheduler_Task   The task object being eddited. Null when adding a task!
-	 * @param  tx_scheduler_Module Reference to the scheduler backend module
-	 * @return array               A two dimensional array, array('Identifier' => array('fieldId' => array('code' => '', 'label' => '', 'cshKey' => '', 'cshLabel' => ''))
-	 */
-	public function getAdditionalFields(array &$taskInfo, $task, tx_scheduler_Module $schedulerModule) {
-		$taskInfo[ $this->setupFileKey ] = $task->{$this->setupFileKey};
-
-		// Write the code for the field
-		$fieldID          = 'task_' . $this->setupFileKey;
-		$fieldCode        = '<input type="text" name="tx_scheduler['. $this->setupFileKey .']" id="' . $fieldID . '" value="' . $taskInfo[ $this->setupFileKey ] . '" size="40" />';
-		$additionalFields = array();
-		$additionalFields[$fieldID] = array(
-			'code'  => $fieldCode,
-			'label' => 'LLL:EXT:dam_scheduler/locallang.xml:label.setupFile',
-		);
-
-		return $additionalFields;
-	}
-
-	/**
-	 * Validates the additional fields' values
-	 *
-	 * @param	array					An array containing the data submitted by the add/edit task form
-	 * @param	tx_scheduler_Module		Reference to the scheduler backend module
-	 * @return	boolean					True if validation was ok (or selected class is not relevant), false otherwise
-	 */
-	public function validateAdditionalFields(array &$submittedData, tx_scheduler_Module $schedulerModule) {
-		if( empty($submittedData[ $this->setupFileKey ])) {
-			$schedulerModule->addMessage($GLOBALS['LANG']->sL('LLL:EXT:dam_scheduler/locallang.xml:label.setupFile.empty'), t3lib_FlashMessage::ERROR);
-			return false;
+		$string = 'Setup: ';
+		if( empty($this->setupTitle)) {
+			$string .= str_replace(PATH_site, '', $this->setupFile);
+		} else {
+			$string .= $this->setupTitle;
 		}
 		
-		$absoluteFilePath = PATH_site . 'fileadmin/' . $submittedData[ $this->setupFileKey ];
-		if (false === file_exists($absoluteFilePath)) {
-			$schedulerModule->addMessage(sprintf($GLOBALS['LANG']->sL('LLL:EXT:dam_scheduler/locallang.xml:label.setupFile.error'),$absoluteFilePath), t3lib_FlashMessage::ERROR);
-			return false;
-		} else {
-			return true;
-		}
+		return $string;
 	}
 
-	/**
-	 * Takes care of saving the additional fields' values in the task's object
-	 *
-	 * @param	array					An array containing the data submitted by the add/edit task form
-	 * @param	tx_scheduler_Module		Reference to the scheduler backend module
-	 * @return	void
-	 */
-	public function saveAdditionalFields(array $submittedData, tx_scheduler_Task $task) {
-		$task->{$this->setupFileKey} = $submittedData[ $this->setupFileKey ];
-	}
 }
 
 if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/dam_scheduler/class.tx_damscheduler_indexTask.php'])	{
