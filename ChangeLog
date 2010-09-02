@@ -2,7 +2,7 @@
 
 	* initial check in
 
-2010-08-27 Joerg kummer <typo3[by]enobe.de>
+2010-08-27 Joerg Kummer <typo3[by]enobe.de>
 
 	* additionalFieldProvided extrahiert (standard) 
 	* field title added to scheduler
@@ -12,3 +12,7 @@
 2010-08-31 Michael Feinbier
 
 	* additional cleanup for 0.1.0
+
+2010-09-01 Joerg Kummer
+
+	* additional context sensitive help

@@ -62,8 +62,10 @@ class tx_damscheduler_indexTask_AdditionalFieldProvider implements tx_scheduler_
 				$fieldCode = '<input type="text" name="tx_scheduler['. $val .']" id="' . $fieldID . '" value="' . $taskInfo[ $val ] . '" size="40" />';
 				 
 				$additionalFields[$fieldID] = array(
-					'code'  => $fieldCode,
-					'label' => 'LLL:EXT:dam_scheduler/locallang.xml:label.' . $val,
+					'code'     => $fieldCode,
+					'label'    => 'LLL:EXT:dam_scheduler/locallang.xml:label.' . $val,
+					'cshKey'   => '_MOD_tools_txschedulerM1',
+					'cshLabel' => $fieldID
 				);
 			}
 		}

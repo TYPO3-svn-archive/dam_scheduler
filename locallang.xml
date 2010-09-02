@@ -14,6 +14,11 @@
 			<label index="label.setupFile">Location of setup file (relative to fileadmin/)</label>
 			<label index="label.setupFile.error">Sorry. The setup file on location %s could not be found.</label>
 			<label index="label.setupFile.empty">Please provide a setup file.</label>
+			<!-- context sensitive help (csh) -->
+			<label index="task_setupTitle.alttitle">Setup title (optional)</label>
+			<label index="task_setupTitle.description">Enter a setup title. Just name your setup definition, so you remember if you should have several tasks for DAM.</label>
+			<label index="task_setupFile.alttitle">Setup file</label>
+			<label index="task_setupFile.description">Enter a path of the location for an existing indexing setup xml file (You should have done steps for indexing setup in DAM: Tools->Indexing Setup->'define and save a setup for the auto indexing feature'..). The path must be relative to 'fileadmin/'.</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="title">DAM Indexierung</label>
@@ -22,14 +27,24 @@
 			<label index="label.setupFile">Pfad zur Setup Datei (relativ zu fileadmin/)</label>
 			<label index="label.setupFile.error">Fehler. Die Setup Datei in %s wurde nicht gefunden.</label>
 			<label index="label.setupFile.empty">Bitte eine Setup Datei angeben.</label>
+			<!-- context sensitive help (csh) -->
+			<label index="task_setupTitle.alttitle">Setup Titel (optional)</label>
+			<label index="task_setupTitle.description">Geben Sie einen Titel für diese Einstellung an, damit Sie diese später und bei mehreren Aufgaben, wiedererkennen.</label>
+			<label index="task_setupFile.alttitle">Setup Datei</label>
+			<label index="task_setupFile.description">Geben Sie den Pfad für eine existierende XML Index Setup-/Einstellungsdatei an (Sie sollten bereits die Schritte zur Erstellung einer Einstellungsdatei im DAM getätigt haben: Tools->Indexierungs-Einstellung->'ein Indexierungs-Setup erstellen und abspeichern'..). Der Pfad zur Setup Datei muss hier relativ zu 'fileadmin/' angegebn werden.</label>
 		</languageKey>
 		<languageKey index="dk" type="array">
-			<label index="title">DAM Indexering</label>
-			<label index="description">Automatisk indexering for DAM filer</label>
-			<label index="label.setupTitle">Title for denne indexering (optional)</label>
+			<label index="title">DAM Indeksering</label>
+			<label index="description">Automatisk indeksering for DAM filer</label>
+			<label index="label.setupTitle">Titel for denne indeksering (optional)</label>
 			<label index="label.setupFile">Stig til setup fil (relativ til fileadmin/)</label>
 			<label index="label.setupFile.error">Fejl. Setup fil at %s ikke fundet.</label>
 			<label index="label.setupFile.empty">Angir venligst et setup fil.</label>
+			<!-- context sensitive help (csh) -->
+			<label index="task_setupTitle.alttitle">Setup titel (optional)</label>
+			<label index="task_setupTitle.description">Angir et navn for din indstilling, sådan at du husker den senere ved flere eksitserende opgaver.</label>
+			<label index="task_setupFile.alttitle">Setup fil</label>
+			<label index="task_setupFile.description">Angir stigen for din xml indekserings instillings fil. (Du skulle allerde har gennemført disse steps i DAM: Tools->Indexing Setup->'define and save a setup for the auto indexing feature'..). Stigen til setup fil skal vær relativ til 'fileadmin/'.</label>
 		</languageKey>
 	</data>
 </T3locallang>
